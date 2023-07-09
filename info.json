@@ -1,0 +1,43 @@
+{
+    "events": [
+        {
+            "name": "SAC Training Series - Student Branch Officers Training",
+            "description": "asdsadasd",
+            "start-date": "01/06/2023",
+            "end-date": "",
+            "url": "https://students.ieee.org/events/sac-training-series-student-branch-officers-training/"
+        },
+        {
+            "name": "IEEE R8 African SYP Congress",
+            "description": "",
+            "start-date": "27/07/2023",
+            "end-date": "29/07/2023",
+            "url": "https://students.ieee.org/events/ieee-r8-african-student-and-young-professional-congress/"
+        },
+        {
+            "name": "IEEEXtreme 17.0",
+            "description": "",
+            "start-date": "28/10/2023",
+            "end-date": "",
+            "url": "https://students.ieee.org/events/ieeextreme-17-0/"
+        }
+    ],
+    "fundings": [
+    ],
+    "reminders": [
+        {
+            "name": "IEEE Student Membership",
+            "description": "",
+            "start-date": "01/06/2023",
+            "end-date": "01/08/2023",
+            "url": "https://students.ieee.org/events/sac-training-series-student-branch-officers-training/"
+        },
+        {
+            "name": "Order Membership Development Kits for your Student Branch",
+            "description": "",
+            "start-date": "03/07/2023",
+            "end-date": "31/12/2023",
+            "url": "https://students.ieee.org/events/sac-training-series-student-branch-officers-training/"
+        }
+    ]
+}
