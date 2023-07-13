@@ -23,30 +23,22 @@ keyboard_inline = InlineKeyboardMarkup().add(eventsButton, fundingsButton, remin
 # Message handler for the /button1 command
 @dp.message_handler(commands=['start'])
 async def check(message: types.Message):
-	await message.reply("Hey you, I'm IEEE R9 bot 😁. How can I help you?", reply_markup=keyboard_inline)
+	await message.reply("Hey you, I'm IEEE bot from IEEE Argentina Section 😁. How can I help you?", reply_markup=keyboard_inline)
 
 # Callback query handler for the inline keyboard buttons
 @dp.callback_query_handler(text=["events_button", "fundings_button", "reminders_button"])
 async def check_button(call: types.CallbackQuery):
 	# Checking which button is pressed and respond accordingly
 	if call.data == "events_button":
-		array_of_events = [
-            data['events'][0]['name'],
-            data['events'][1]['name'],
-            data['events'][2]['name']
-        ]
+		array_of_events = data['events']
 		cantEvents = len(array_of_events)
+		markup = types.InlineKeyboardMarkup()
+
 		for i in range(cantEvents):
-			Button1 = InlineKeyboardButton(text=array_of_events[0], callback_data="ieeextreme_button")
-			Button2 = InlineKeyboardButton(text=array_of_events[1], callback_data="sactraining_button")
-			Button3 = InlineKeyboardButton(text=array_of_events[2], callback_data="r8africansyp_button")
-		# 	match i:
-		# 		case "1":
-		# 			Button1 = InlineKeyboardButton(text=array_of_events[i], callback_data=array_of_events[i] + "_button")
-		# 		case "2":
-		# 			Button2 = InlineKeyboardButton(text=array_of_events[i], callback_data=array_of_events[i] + "_button")
-		keyboard1_inline = InlineKeyboardMarkup().add(Button1, Button2, Button3)
-		await call.message.answer(text= "Events list: ", reply_markup=keyboard1_inline)
+			event = array_of_events[i]
+			markup.add(InlineKeyboardButton(text=event['name'], callback_data=f'{event["id"]}_button'))
+		
+		await call.message.answer(text='Events', reply_markup=markup)
 
 	elif call.data == "reminders_button":
 		array_of_reminders = [
