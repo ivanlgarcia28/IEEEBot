@@ -1,45 +1,87 @@
 {
     "events": [
         {
-            "name": "SAC Training Series - Student Branch Officers Training",
-            "id": "sac_training_1",
-            "description": "asdsadasd",
-            "start-date": "01/06/2023",
-            "end-date": "",
-            "url": "https://students.ieee.org/events/sac-training-series-student-branch-officers-training/"
-        },
-        {
-            "name": "IEEE R8 African SYP Congress",
-            "id": "ieee_r8_syp_congress",
-            "description": "",
-            "start-date": "27/07/2023",
-            "end-date": "29/07/2023",
-            "url": "https://students.ieee.org/events/ieee-r8-african-student-and-young-professional-congress/"
-        },
-        {
-            "name": "IEEEXtreme 17.0",
             "id": "ieeextreme_17",
+            "name": "IEEEXtreme 17.0",
+            "description": "IEEEXtreme is a global challenge in which teams of IEEE Student members compete in a 24-hour time span against each other to solve a set of programming problems. Team registration opens 1 August.",
+            "start-date": "28/10/2023",
+            "end-date": "29/10/2023",
+            "url": "https://ieeextreme.org/"
+        },
+        {
+            "id": "rnr_chile",
+            "name": "RNR Chile 2023",
             "description": "",
             "start-date": "28/10/2023",
             "end-date": "",
-            "url": "https://students.ieee.org/events/ieeextreme-17-0/"
+            "url": "https://rnr2023.cl/"
+        },
+        {
+            "id": "sbrm",
+            "name": "SBRM ",
+            "description": "",
+            "start-date": "29/10/2023",
+            "end-date": "31/10/2023",
+            "url": "https://r9.ieee.org/sbrm/"
         }
     ],
     "fundings": [
+        {
+            "id": "step",
+            "name": "STEP",
+            "description": "",
+            "url": "https://yp.ieee.org/volunteers/event-funding/"
+        },
+        {
+            "id": "spax_events",
+            "name": "SPAx Events",
+            "description": "",
+            "url": "https://students.ieee.org/student-opportunities/professional-awareness/spax-events/"
+        },
+        {
+            "id": "sac_awards",
+            "name": "SAC Awards Programs",
+            "description": "",
+            "url": "https://students.ieee.org/student-opportunities/sac-awards-programs/"
+        }
     ],
     "reminders": [
         {
-            "name": "IEEE Student Membership",
+            "id": "development_kit",
+            "name": "Order Membership Development Kits for your Student Branch",
             "description": "",
-            "start-date": "01/06/2023",
-            "end-date": "01/08/2023",
             "url": "https://students.ieee.org/events/sac-training-series-student-branch-officers-training/"
         },
         {
-            "name": "Order Membership Development Kits for your Student Branch",
+            "id": "student_branch_annual_plan",
+            "name": "Student Branch Annual Plan",
             "description": "",
-            "start-date": "03/07/2023",
-            "end-date": "31/12/2023",
+            "url": "https://students.ieee.org/student-branches/officer-responsibilities-reporting/"
+        },
+        {
+            "id": "student_branch_officer_reporting",
+            "name": "Student Branch Officer Reporting (Ongoing)",
+            "description": "",
+            "url": "https://students.ieee.org/student-branches/officer-responsibilities-reporting/"
+        }
+    ],
+    "resources": [
+        {
+            "id": "ieee_student_membership",
+            "name": "IEEE Student Membership",
+            "description": "Require your IEEE Student Membership for $7 usd until August 1st.",
+            "url": "https://www.ieee.org/membership/join/index.html"
+        },
+        {
+            "id": "funds_awards",
+            "name": "Funds and Awards",
+            "description": "Feel free to consult the page for more information about funds and awards.",
+            "url": "https://students.ieee.org/membership-benefits/ieee-benefits/funds-and-awards/"
+        },
+        {
+            "id": "virtual_speakers",
+            "name": "Virtual Speakers",
+            "description": "Request or become a virtual speaker for some event.",
             "url": "https://students.ieee.org/events/sac-training-series-student-branch-officers-training/"
         }
     ]

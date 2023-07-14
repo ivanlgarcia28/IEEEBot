@@ -18,7 +18,8 @@ with open('info.json') as f:
 eventsButton = InlineKeyboardButton(text="Events", callback_data="events_button")
 fundingsButton = InlineKeyboardButton(text="Fundings", callback_data="fundings_button")
 remindersButton = InlineKeyboardButton(text="Reminders", callback_data="reminders_button")
-keyboard_inline = InlineKeyboardMarkup().add(eventsButton, fundingsButton, remindersButton)
+resourcesButton = InlineKeyboardButton(text="Resources", callback_data="resources_button")
+keyboard_inline = InlineKeyboardMarkup().add(eventsButton, fundingsButton, remindersButton, resourcesButton)
 
 # Message handler for the /button1 command
 @dp.message_handler(commands=['start'])
@@ -26,7 +27,7 @@ async def check(message: types.Message):
 	await message.reply("Hey you, I'm IEEE bot from IEEE Argentina Section 😁. How can I help you?", reply_markup=keyboard_inline)
 
 # Callback query handler for the inline keyboard buttons
-@dp.callback_query_handler(text=["events_button", "fundings_button", "reminders_button"])
+@dp.callback_query_handler(text=["events_button", "fundings_button", "reminders_button", "resources_button"])
 async def check_button(call: types.CallbackQuery):
 	# Checking which button is pressed and respond accordingly
 	if call.data == "events_button":
@@ -37,32 +38,45 @@ async def check_button(call: types.CallbackQuery):
 		for i in range(cantEvents):
 			event = array_of_events[i]
 			markup.add(InlineKeyboardButton(text=event['name'], callback_data=f'{event["id"]}_button'))
-		
-		await call.message.answer(text='Events', reply_markup=markup)
+		await call.message.answer(text='Events' , reply_markup=markup)
+
+		@dp.callback_query_handler(text=["ieeextreme_17_button", "rnr_chile_button"])
+		async def eventsdescription_button(call: types.CallbackQuery):
+		# Checking which button is pressed and respond accordingly
+			if call.data == "ieeextreme_17_button":
+				await call.message.answer(text="1st")
 
 	elif call.data == "reminders_button":
-		array_of_reminders = [
-			data['reminders'][0]['name'],
-			data['reminders'][1]['name']
-		]
+		array_of_reminders = data['reminders']
 		cantReminders = len(array_of_reminders)
-		for i in range(cantReminders):
-			Button1 = InlineKeyboardButton(text=array_of_reminders[0], callback_data="ieeextreme_button")
-			Button2 = InlineKeyboardButton(text=array_of_reminders[1], callback_data="sactraining_button")
-		keyboard1_inline = InlineKeyboardMarkup().add(Button1, Button2)
-		await call.message.answer(text= "Reminders list: ", reply_markup=keyboard1_inline)
+		markup1 = types.InlineKeyboardMarkup()
 
-		@dp.callback_query_handler(text=["ieeextreme_button", "sactraining_button"])
-		async def reminders_button(call: types.CallbackQuery):
-			print('Entre ieeextreme_button y')
-			# if call.data == "ieeextreme_button":
-			# 	print('Entre ieeextreme_button')
-			# elif call.data == "sactraining_button":
-			# 	print('Entre sactraining_button')	
+		for i in range(cantReminders):
+			reminder = array_of_reminders[i]
+			markup1.add(InlineKeyboardButton(text=reminder['name'], callback_data=f'{reminder["id"]}_button'))
+		await call.message.answer(text='Reminders', reply_markup=markup1)
 
 	elif call.data == "fundings_button":
-		await call.message.answer("Hi! This is the fundings keyboard button.")
+		array_of_fundings = data['fundings']
+		cantFundings = len(array_of_fundings)
+		markup2 = types.InlineKeyboardMarkup()
 
+		for i in range(cantFundings):
+			funding = array_of_fundings[i]
+			markup2.add(InlineKeyboardButton(text=funding['name'], callback_data=f'{funding["id"]}_button'))
+		
+		await call.message.answer(text='Fundings', reply_markup=markup2)
+	elif call.data == "resources_button":
+		array_of_resources = data['resources']
+		cantResources = len(array_of_resources)
+		markup3 = types.InlineKeyboardMarkup()
+
+		for i in range(cantResources):
+			resources = array_of_resources[i]
+			markup3.add(InlineKeyboardButton(text=resources['name'], callback_data=f'{resources["id"]}_button'))
+	
+		await call.message.answer(text='Resources', reply_markup=markup3)
+	
 	# Notify the Telegram server that the callback query is answered successfully
 	await call.answer()
 	
