@@ -32,19 +32,18 @@ async def check_button(call: types.CallbackQuery):
 	# Checking which button is pressed and respond accordingly
 	if call.data == "events_button":
 		array_of_events = data['events']
-		cantEvents = len(array_of_events)
+		button_events = []
 		markup = types.InlineKeyboardMarkup()
 
-		for i in range(cantEvents):
-			event = array_of_events[i]
-			markup.add(InlineKeyboardButton(text=event['name'], callback_data=f'{event["id"]}_button'))
+		for key, value in array_of_events.items():
+			button_events.append(key)
+			markup.add(InlineKeyboardButton(text=value['name'], callback_data=key))
+
 		await call.message.answer(text='Events' , reply_markup=markup)
 
-		@dp.callback_query_handler(text=["ieeextreme_17_button", "rnr_chile_button"])
+		@dp.callback_query_handler(text=button_events)
 		async def eventsdescription_button(call: types.CallbackQuery):
-		# Checking which button is pressed and respond accordingly
-			if call.data == "ieeextreme_17_button":
-				await call.message.answer(text="1st")
+			await call.message.answer(text=array_of_events[call.data]["description"])
 
 	elif call.data == "reminders_button":
 		array_of_reminders = data['reminders']
