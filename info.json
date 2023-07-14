@@ -1,30 +1,27 @@
 {
-    "events": [
-        {
-            "id": "ieeextreme_17",
+    "events": {
+        "ieeextreme_17": {
             "name": "IEEEXtreme 17.0",
             "description": "IEEEXtreme is a global challenge in which teams of IEEE Student members compete in a 24-hour time span against each other to solve a set of programming problems. Team registration opens 1 August.",
             "start-date": "28/10/2023",
             "end-date": "29/10/2023",
             "url": "https://ieeextreme.org/"
         },
-        {
-            "id": "rnr_chile",
+        "rnr_chile": {
             "name": "RNR Chile 2023",
             "description": "",
             "start-date": "28/10/2023",
             "end-date": "",
             "url": "https://rnr2023.cl/"
         },
-        {
-            "id": "sbrm",
+        "sbrm_2023": {
             "name": "SBRM ",
             "description": "",
             "start-date": "29/10/2023",
             "end-date": "31/10/2023",
             "url": "https://r9.ieee.org/sbrm/"
         }
-    ],
+    },
     "fundings": [
         {
             "id": "step",
