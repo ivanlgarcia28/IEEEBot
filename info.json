@@ -9,77 +9,69 @@
         },
         "rnr_chile": {
             "name": "RNR Chile 2023",
-            "description": "",
+            "description": "RNR es la Reunión Nacional de Ramas de IEEE, el evento más importante para la comunidad estudiantil de la Sección Chile, donde confluyen estudiantes, profesionales y voluntarios de todo el país para compartir experiencias, ideas, ilusiones y conocimientos en torno a los principios y metas que tiene el instituto a nivel local y global.",
             "start-date": "28/10/2023",
             "end-date": "",
             "url": "https://rnr2023.cl/"
         },
         "sbrm_2023": {
             "name": "SBRM ",
-            "description": "",
+            "description": "SBRM es la Reunión Regional de Ramas Estudiantes de IEEE, es el evento estudiantil más impactante en la Región. Brinda un espacio de formación, encuentro y desarrollo de habilidades blandas y duras a todos los voluntarios.",
             "start-date": "29/10/2023",
             "end-date": "31/10/2023",
             "url": "https://r9.ieee.org/sbrm/"
         }
     },
-    "fundings": [
-        {
-            "id": "step",
+    "fundings": {
+        "step": {
             "name": "STEP",
-            "description": "",
+            "description": "STEP is funding stream designed to bring together students and young professionals. It aims to introduce current and potential IEEE Members to IEEE Young Professionals.",
             "url": "https://yp.ieee.org/volunteers/event-funding/"
-        },
-        {
-            "id": "spax_events",
+            },
+        "spax_events": {
             "name": "SPAx Events",
-            "description": "",
+            "description": "SPAx Events: Take a look of the different events have been hosted by SPAx events. Be sure to share your event reports with them, so they can include your event there as well.",
             "url": "https://students.ieee.org/student-opportunities/professional-awareness/spax-events/"
-        },
-        {
-            "id": "sac_awards",
-            "name": "SAC Awards Programs",
-            "description": "",
-            "url": "https://students.ieee.org/student-opportunities/sac-awards-programs/"
         }
-    ],
-    "reminders": [
-        {
-            "id": "development_kit",
+    },
+    "reminders": {
+        "development_kit": {
             "name": "Order Membership Development Kits for your Student Branch",
-            "description": "",
-            "url": "https://students.ieee.org/events/sac-training-series-student-branch-officers-training/"
+            "description": "Membership Development: Student Branch can order Membership Development materials for your Branch's events and membership drives! Student Branches can also print their own materials.",
+            "url": "https://students.ieee.org/events/order-membership-development-kits-for-your-student-branch/"
         },
-        {
-            "id": "student_branch_annual_plan",
+        "student_branch_annual_plan": {
             "name": "Student Branch Annual Plan",
-            "description": "",
+            "description": "Student Branch Annual Plan: Your Student Branch is required to submit the Student Branch Annual Plan. It also serves as a valuable historical docum,ent to aid future executives in their planning and records financial statements so it is important that the Student Branch Treasurer is involved in the preparation of the report.",
+            "end-date": "01/02/2024",
             "url": "https://students.ieee.org/student-branches/officer-responsibilities-reporting/"
         },
-        {
-            "id": "student_branch_officer_reporting",
+        "student_branch_officer_reporting":{
             "name": "Student Branch Officer Reporting (Ongoing)",
-            "description": "",
+            "description": "Student Branch Officer Reporting: Each time a new ExCom member or Branch Counselor is selected to serve at your Student Branch, the IEEE Operations Center must be notified.",
             "url": "https://students.ieee.org/student-branches/officer-responsibilities-reporting/"
         }
-    ],
-    "resources": [
-        {
-            "id": "ieee_student_membership",
+        },
+    "resources": {
+        "ieee_student_membership":{
             "name": "IEEE Student Membership",
             "description": "Require your IEEE Student Membership for $7 usd until August 1st.",
             "url": "https://www.ieee.org/membership/join/index.html"
         },
-        {
-            "id": "funds_awards",
+        "funds_awards":{
             "name": "Funds and Awards",
             "description": "Feel free to consult the page for more information about funds and awards.",
             "url": "https://students.ieee.org/membership-benefits/ieee-benefits/funds-and-awards/"
         },
-        {
-            "id": "virtual_speakers",
+        "virtual_speakers":{
             "name": "Virtual Speakers",
             "description": "Request or become a virtual speaker for some event.",
             "url": "https://students.ieee.org/events/sac-training-series-student-branch-officers-training/"
+        },
+        "sac_awards": {
+                "name": "SAC Awards Programs",
+                "description": "Learn more of SAC Awards Programs on the page below!",
+                "url": "https://students.ieee.org/student-opportunities/sac-awards-programs/"
         }
-    ]
+        }
 }
